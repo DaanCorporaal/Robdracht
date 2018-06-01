@@ -1,6 +1,7 @@
 <?php
 include('loginFunct.php');
-
+$pdo = ConnectDB();
+ob_start();
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $fPassword = $_POST['password'];
@@ -11,6 +12,18 @@ if(isset($_POST['submit'])){
     $fPassword = hash('sha512', $fPassword . $Salt);
 
 
+    // Create confirm_code
+
+
+
+    //  $confirm_code = *code generated ^^^ *
+    
+
+    $parameters = array(':email' => $email, ':pw' => $fPassword , ':salt' => $Salt);
+    $sth = $pdo->prepare('INSERT INTO personal_details (email , password , salt) VALUES (:email , :pw , :salt)');
+    $sth->execute($parameters);
+
+    header('Location: ../../../Login');
 } else {
     require ('../../../forms/registerForm.html');
 }
