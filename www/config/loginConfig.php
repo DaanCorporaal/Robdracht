@@ -2,6 +2,6 @@
 
 // Database Config
 define("HOST", "localhost");
-define("DBNAME", "UXHackathonDB");
+define("DBNAME", "ct_db");
 define("USERNAME", "root");
 define("PASSWORD", "");
