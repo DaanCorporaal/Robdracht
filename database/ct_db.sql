@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2018 at 12:30 PM
+-- Generation Time: Jun 01, 2018 at 12:39 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -116,6 +116,8 @@ CREATE TABLE `personal_details` (
   `prefix` varchar(10) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `salt` varchar(256) NOT NULL,
   `classname` varchar(20) NOT NULL,
   `school_class` tinyint(1) NOT NULL,
   `bpv_name` varchar(100) NOT NULL,
