@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
 
 
     //  $confirm_code = *code generated ^^^ *
-    
+
 
     $parameters = array(':email' => $email, ':pw' => $fPassword , ':salt' => $Salt);
     $sth = $pdo->prepare('INSERT INTO personal_details (email , password , salt) VALUES (:email , :pw , :salt)');
@@ -25,5 +25,5 @@ if(isset($_POST['submit'])){
 
     header('Location: ../../../Login');
 } else {
-    require ('../../../forms/registerForm.html');
+    require ('../../../forms/login/registerForm.html');
 }
