@@ -1,0 +1,79 @@
+// includes
+
+// general styling
+body {
+  margin: 0;
+}
+
+// fonts
+@font-face {
+  font-family: pfs-bold;
+  src: url('../resources/font/PFSSPB.otf');
+}
+
+// login styling
+.formLogin {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../resources/media/login.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  .login-wrap {
+    width: 25vw;
+    position: absolute;
+    left: 15vw;
+    top: 20vh;
+    padding: 5%;
+    h1 {
+      font-family: pfs-bold;
+      color: white;
+    }
+    input {
+      padding: 10px;
+      margin-bottom: 20px;
+      font-family: pfs-bold;
+      color: #fff;
+      background-color: $dark;
+      border: 2px solid $dark;
+      border-radius: 1px;
+      box-shadow: 0 0 0 #222;
+      transition: .1s;
+      width: -webkit-fill-available;
+      text-align: center;
+      &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &:hover {
+        border-style: dot-dash;
+        border-color: $semilight;
+      }
+      &:active {
+        box-shadow: 1px 1px 2px #222;
+      }
+    }
+    .btn-main {
+      padding: 10px;
+      margin-bottom: 20px;
+      font-family: pfs-bold;
+      color: #fff;
+      background-color: $dark;
+      border: 2px solid $dark;
+      border-radius: 1px;
+      box-shadow: 0 0 0 #222;
+      transition: .1s;
+      width: -webkit-fill-available;
+      text-align: center;
+      &:hover {
+        border-style: dot-dash;
+        border-color: $semilight;
+      }
+      &:active {
+        box-shadow: 1px 1px 2px #222;
+      }
+    }
+  }
+}
