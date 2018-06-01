@@ -19,11 +19,11 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('../resources/media/login.svg');
-  background-position: center;
+  background-image: url('../resources/media/Abstract.svg');
+  background-position: right;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
-  background-size: cover;
+  background-size: contain;
   .login-wrap {
     width: 25vw;
     position: absolute;
@@ -32,7 +32,7 @@ body {
     padding: 5%;
     h1 {
       font-family: pfs-bold;
-      color: white;
+      color: $dark;
     }
     input {
       padding: 10px;
