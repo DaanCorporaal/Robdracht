@@ -8,6 +8,10 @@ body {
   outline: none;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 // fonts
 @font-face {
   font-family: pfs-bold;
@@ -24,6 +28,19 @@ body {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: contain;
+  .loginFormImg {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    left: 102px;
+    top: 267px;
+    -webkit-transform: scale(1.5) rotate(15deg);
+    -ms-transform: scale(1.5) rotate(15deg);
+    transform: scale(1.4) rotate(15deg);
+    &::selection {
+      background-color: transparent;
+    }
+  }
   .login-wrap {
     width: 25vw;
     position: absolute;
@@ -32,27 +49,28 @@ body {
     padding: 5%;
     h1 {
       font-family: pfs-bold;
-      color: $dark;
+      color: #fff;
     }
     input {
       padding: 10px;
       margin-bottom: 20px;
       font-family: pfs-bold;
       color: #fff;
-      background-color: $dark;
-      border: 2px solid $dark;
+      background-color: #fec800;
+      border: 2px solid #fec800;
       border-radius: 1px;
       box-shadow: 0 0 0 #222;
       transition: .1s;
       width: -webkit-fill-available;
       text-align: center;
+      font-size: 20px;
       &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
       &:hover {
         border-style: dot-dash;
-        border-color: $semilight;
+        border-color: #fcf0df;
       }
       &:active {
         box-shadow: 1px 1px 2px #222;
@@ -63,16 +81,18 @@ body {
       margin-bottom: 20px;
       font-family: pfs-bold;
       color: #fff;
-      background-color: $dark;
-      border: 2px solid $dark;
+      background-color: #f18416;
+      border: 2px solid #f18416;
       border-radius: 1px;
       box-shadow: 0 0 0 #222;
       transition: .1s;
       width: -webkit-fill-available;
       text-align: center;
+      cursor: pointer;
+      font-size: 20px;
       &:hover {
         border-style: dot-dash;
-        border-color: $semilight;
+        border-color: #d87114;
       }
       &:active {
         box-shadow: 1px 1px 2px #222;

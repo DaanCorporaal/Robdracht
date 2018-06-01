@@ -11,8 +11,9 @@ session_start();
     <script src="../functions/js/jquery-ui.js"></script>
 </head>
 
-<body>
+<body class="overflow-hidden">
     <form method="post" action="../functions/php/login/login.php" class="formLogin">
+        <img src="../styles/resources/media/loginForm.svg" class="loginFormImg" draggable="false">
         <div class="login-wrap">
             <h1>Login</h1>
             <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" placeholder=""><br>
