@@ -11,12 +11,13 @@ session_start();
     <script src="../functions/js/jquery-ui.js"></script>
 </head>
 
-<body>
+<body class="overflow-hidden">
     <form method="post" action="../functions/php/login/login.php" class="formLogin">
+        <img src="../styles/resources/media/loginForm.svg" class="loginFormImg" draggable="false">
         <div class="login-wrap">
             <h1>Login</h1>
-            <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" placeholder=""><br>
-            <input type="password" autocomplete="off" autofocus required name="password" placeholder=""><br>
+            <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" placeholder="username"><br>
+            <input type="password" autocomplete="off" autofocus required name="password" placeholder="password"><br>
             <button type="submit" name="login" class="btn-main">login</button>
         </div>
     </form>
