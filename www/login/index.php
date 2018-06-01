@@ -6,13 +6,13 @@ session_start();
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link href="css/main.css" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <link href="../styles/css/main.css" rel="stylesheet">
+    <script src="../functions/js/jquery.js"></script>
+    <script src="../functions/js/jquery-ui.js"></script>
 </head>
 
 <body>
-    <form method="post" action="login/login.php" class="formLogin">
+    <form method="post" action="../functions/php/login/login.php" class="formLogin">
         <div class="login-wrap">
             <h1>Login</h1>
             <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" placeholder="username"><br>

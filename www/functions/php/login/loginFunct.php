@@ -24,7 +24,7 @@ function LoginCheck($pdo)
 
         $user_browser = $_SERVER['HTTP_USER_AGENT'];
 
-        $parameters = array(':rOSuser_id'=>$rOSuser_id);
+        $parameters = array(':user_id'=>$user_id);
         $sth = $pdo->prepare('SELECT password FROM app_users WHERE rOSuser_id = :KlantID LIMIT 1');
 
         $sth->execute($parameters);

@@ -28,7 +28,6 @@ function login($Username , $Password , $pdo)
 
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['user_name'] = $row['user_name'];
-            $_SESSION['level'] = $row['user_level'];
 
             // Login success.
             return true;
