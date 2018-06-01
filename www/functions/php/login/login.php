@@ -2,13 +2,13 @@
 
 session_start();
 ob_start();
+
 require ('loginFunct.php');
-require ('config.php');
+
 $pdo = ConnectDB();
 
 function login($Username , $Password , $pdo)
 {
-    echo '<br />function start';
     $parameter = array(':name'=>$Username);
     $sth = $pdo->prepare('SELECT * FROM users WHERE user_name = :name');
 
@@ -16,7 +16,6 @@ function login($Username , $Password , $pdo)
 
     if ($sth->rowCount() == 1)
     {
-        echo '<br />query';
         // get variable with query
         $row = $sth->fetch();
 
@@ -25,7 +24,6 @@ function login($Username , $Password , $pdo)
 
         if ($row['user_password'] == $Password)
         {
-            echo '<br />password = true';
             $user_browser = $_SERVER['HTTP_USER_AGENT'];
 
             $_SESSION['user_id'] = $row['user_id'];
@@ -37,15 +35,13 @@ function login($Username , $Password , $pdo)
         }
         else
         {
-            echo '<br />pass wrong';
-            echo $Password;
             // password wrong
+            echo $Password;
             return false;
         }
     }
     else
     {
-		echo 'username rip';
         // username does not exist
         return false;
     }
@@ -54,18 +50,23 @@ function login($Username , $Password , $pdo)
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-	echo 'post set';
 
 
     $check = login($username,$password,$pdo);
 
     if($check){
+        // login true
         header('Location: ../');
     }
     else{
+        // login false
         header('Location: ../');
 
     }
+}
+else{
+    // login page
+    header('');
 }
 
 ?>

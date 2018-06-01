@@ -1,6 +1,7 @@
 <?php
 
-require ('config.php');
+require ('../../../config/loginConfig.php');
+
 function ConnectDB()
 {
     try{
@@ -12,6 +13,7 @@ function ConnectDB()
 
     return $pdo;
 }
+// werkt nog niet moet eerst de database gemaakt zijn en de login fucntie
 function LoginCheck($pdo)
 {
     if (isset($_SESSION['user_id'], $_SESSION['user_name'],$_SESSION['login_string']))
