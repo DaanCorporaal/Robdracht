@@ -5,6 +5,7 @@ session_start();
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link href="../styles/css/main.css" rel="stylesheet">
     <script src="../functions/js/jquery.js"></script>
