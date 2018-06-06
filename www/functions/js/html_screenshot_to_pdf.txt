@@ -1,0 +1,12 @@
+<a href="javascript:genPdf()">download pdf</a>
+function genPdf() {
+        var doc = new jsPDF();
+        var img;
+        html2canvas(document.body).then(function(canvas) {
+            img = canvas.toDataURL("image/png");
+            doc.addImage(img , 'JPEG',35,25);
+            doc.setFontSize(40);
+            doc.text(35, 25, 'Lesvoorbereiding');
+            doc.save('test.pdf');
+        });
+    }

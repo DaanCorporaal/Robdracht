@@ -1,20 +1,33 @@
 <?php
 require_once 'dompdf/autoload.inc.php';
-
-// reference the Dompdf namespace
 use Dompdf\Dompdf;
+if(isset($_POST['submit'])){
+    if(isset($_POST['name'])){
+        $html = get_include_contents('template.php');
 
-// instantiate and use the dompdf class
-$dompdf = new Dompdf();
-$dompdf->loadHtml('hello world');
+        // create PDF
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'portrait');
+        $dompdf->render();
+        $dompdf->stream($_POST['name'].'.pdf');
 
-// (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A4', 'landscape');
+        }
 
-// Render the HTML as PDF
-$dompdf->render();
 
-// Output the generated PDF to Browser
-$dompdf->stream();
+}else {
+    require('../../../forms/pdfcreate/pdfcreateform.php');
+}
 
+// function to get file content after PHP has ran
+function get_include_contents($filename) {
+    if (is_file($filename)) {
+        ob_start();
+        include $filename;
+        $contents = ob_get_contents();
+        ob_end_clean();
+        return $contents;
+    }
+    return false;
+}
 ?>
