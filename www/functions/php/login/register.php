@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     $sth = $pdo->prepare('INSERT INTO personal_details (email , password , salt) VALUES (:email , :pw , :salt)');
     $sth->execute($parameters);
 
-    header('Location: ../../../Login');
+    header('Location: ../');
 } else {
-    require ('../../../forms/login/registerForm.html');
+    require ('../../forms/login/registerForm.html');
 }
