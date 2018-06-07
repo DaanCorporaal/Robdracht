@@ -2,7 +2,7 @@
 require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 if(isset($_POST['submit'])){
-    if(isset($_POST['name'])){
+    if(isset($_POST['fileName'])) {
         $html = get_include_contents('template.php');
 
         // create PDF
@@ -10,11 +10,9 @@ if(isset($_POST['submit'])){
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
-        $dompdf->stream($_POST['name'].'.pdf');
+        $dompdf->stream($_POST['fileName'] . '.pdf');
 
-        }
-
-
+    }
 }else {
     require('../../../forms/pdfcreate/pdfcreateform.php');
 }
