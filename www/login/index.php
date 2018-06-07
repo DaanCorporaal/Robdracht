@@ -20,7 +20,6 @@ session_start();
             <p class="login-input">Email</p>
             <div class="email-wrap">
                 <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" id="email-input">
-                <input type="text" required spellcheck="false" id="email-standard">
             </div>
             <p class="login-input">Wachtwoord</p>
             <input type="password" autocomplete="off" autofocus required name="password" class="password">
