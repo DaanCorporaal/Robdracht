@@ -1,6 +1,6 @@
 <?php
 
-require ('../../config/databaseConfig.php');
+
 
 function ConnectDB()
 {

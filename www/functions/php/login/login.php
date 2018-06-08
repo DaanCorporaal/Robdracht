@@ -2,7 +2,7 @@
 
 session_start();
 ob_start();
-
+require ('../../../config/databaseConfig.php');
 require ('loginFunct.php');
 
 $pdo = ConnectDB();
@@ -10,32 +10,32 @@ $pdo = ConnectDB();
 function login($Username , $Password , $pdo)
 {
     $parameter = array(':name'=>$Username);
-    $sth = $pdo->prepare('SELECT * FROM users WHERE user_name = :name');
+    $sth = $pdo->prepare('SELECT * FROM personal_details WHERE email = :name');
 
     $sth->execute($parameter);
 
     if ($sth->rowCount() == 1)
     {
-        // get variable with query
+        // POST variable with query
         $row = $sth->fetch();
 
+        $ogpass = $Password;
         // has to variable
-        $Password = hash('sha512', $Password);
+        $Password = hash('sha512', $ogpass . $row['salt']);
 
-        if ($row['user_password'] == $Password)
+        if ( $row['password'] == $Password)
         {
             $user_browser = $_SERVER['HTTP_USER_AGENT'];
+            $_SESSION['userId'] = $row['person_id'];
+            $_SESSION['session_code'] = $row['confirm_code'];
+            $_SESSION['login'] = true;
 
-            $_SESSION['user_id'] = $row['user_id'];
-            $_SESSION['user_name'] = $row['user_name'];
+             return true;
 
-            // Login success.
-            return true;
         }
         else
         {
             // password wrong
-            echo $Password;
             return false;
         }
     }
@@ -50,22 +50,23 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-
     $check = login($username,$password,$pdo);
 
     if($check){
-        // login true
-        header('Location: ../');
+         // login true
+                header('Location: ../../../home');
     }
-    else{
+    else
+    {
         // login false
-        header('Location: ../');
+       header('Location: ../../../login');
 
     }
 }
 else{
     // login page
-    header('');
+    echo 'login not set';
+   // header('../../../login');
 }
 
 ?>
