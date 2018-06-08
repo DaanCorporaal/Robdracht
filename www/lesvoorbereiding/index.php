@@ -11,13 +11,13 @@
 // define variables and set to empty values
 $datum = date("Y-m-d");
 
-$schoolvak = $onderwerp = $doel = $startsituatie = "";
+$schoolvak = $onderwerp = $doel = $startsituatie = $notities = "";
 $owndoel = $ownstartsituatie = $in_werkvorm = $in_organisatie = $in_leeractiviteit = "";
 $in_werkvorm = $in_organisatie = $in_leeractiviteit = $in_aandachtspunten = "";
 $ke_werkvorm = $ke_organisatie = $ke_leeractiviteit = $ke_aandachtspunten = "";
 $sl_werkvorm = $sl_organisatie = $sl_leeractiviteit = $sl_aandachtspunten = "";
 
-$datumErr = $schoolvakErr = $onderwerpErr = $doelErr = $startsituatieErr = "";
+$datumErr = $schoolvakErr = $onderwerpErr = $doelErr = $startsituatieErr = $notitiesErr ="";
 $owndoelErr = $ownstartsituatieErr = $in_werkvormErr = $in_organisatieErr = $in_leeractiviteitErr = "";
 $in_werkvormErr = $in_organisatieErr = $in_leeractiviteitErr = $in_aandachtspuntenErr = "";
 $ke_werkvormErr = $ke_organisatieErr = $ke_leeractiviteitErr = $ke_aandachtspuntenErr = "";
@@ -55,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sl_organisatie = $_POST["sl_organisatie"];
     $sl_leeractiviteit = $_POST["sl_leeractiviteit"];
     $sl_aandachtspunten = $_POST["sl_aandachtspunten"];
+    $notities = $_POST['notities'];
 
 
 }
@@ -69,9 +70,10 @@ function test_input($data) {
 
 <h2>Lesvoorbereiding form</h2>
 <?php
+// Test values
 include '../forms/Lesvoorbereiding/index.php';
 
-echo "<h2>Your Input:</h2>";
+echo "<h2>Test values database:</h2>";
 echo $datum;
 echo "<br>";
 echo $schoolvak;
@@ -115,6 +117,8 @@ echo "<br>";
 echo $sl_leeractiviteit;
 echo "<br>";
 echo $sl_aandachtspunten;
+echo "<br>";
+echo $notities;
 echo "<br>";
 
 ?>

@@ -157,6 +157,14 @@
         <span class="error">* <?php echo $sl_aandachtspuntenErr;?></span>
     </label>
     <br><br>
+    <!-- Notities-->
+    <label for="notities">
+        Notities:
+        <input type="text" name="notities" id="notities" value="<?php echo $notities;?>">
+        <!-- Aandachtspunten error-->
+        <span class="error">* <?php echo $notitiesErr;?></span>
+    </label>
+    <br><br>
 
 
     <input type="submit" name="submit" value="Submit">
