@@ -16,7 +16,7 @@ session_start();
     <form method="post" action="../functions/php/login/login.php" class="formLogin">
         <img src="../styles/resources/media/loginForm.svg" class="loginFormImg" draggable="false">
         <div class="login-wrap">
-            <h1>Login</h1>
+            <h1>Inloggen</h1>
             <p class="login-input">Email</p>
             <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" id="email-input" class="input">
             <p class="login-input">Wachtwoord</p>
