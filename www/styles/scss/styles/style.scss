@@ -79,7 +79,7 @@ body {
         }
       }
     }
-    .password {
+    .input {
       padding: 10px 20px;
       font-family: pfs-bold;
       color: #fff;
@@ -88,10 +88,12 @@ body {
       border-radius: 25px;
       box-shadow: 0 0 0 #222;
       transition: .1s;
+      width: 100%;
       width: -webkit-fill-available;
+      width: -moz-available;
+      width: fill-available;
       text-align: left;
       font-size: 20px;
-      margin-bottom: 20px;
       &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
@@ -103,35 +105,8 @@ body {
       &:focus {
         box-shadow: 1px 1px 2px #222;
       }
-    }
-    .email-wrap {
-      background-color: #fec800;
-      border: 2px solid #fec800;
-      border-radius: 25px;
-      box-shadow: 0 0 0 #222;
-      transition: .1s;
-      width: -webkit-fill-available;
-      &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-      &:hover {
-        border-style: dot-dash;
-        border-color: #fcf0df;
-      }
-      &:focus-within {
-        box-shadow: 1px 1px 2px #222;
-      }
-      input {
-        width: 100%;
-        border: none;
-        background-color: transparent;
-        font-family: pfs-bold;
-        color: #fff;
-        font-size: 20px;
-        text-align: right;
-        padding: 10px 20px;
-        text-align: left;
+      &:last-of-type {
+        margin-bottom: 20px;
       }
     }
     .btn-main {
@@ -144,7 +119,10 @@ body {
       border-radius: 25px;
       box-shadow: 0 0 0 #222;
       transition: .1s;
+      width: 100%;
       width: -webkit-fill-available;
+      width: -moz-available;
+      width: fill-available;
       text-align: center;
       cursor: pointer;
       font-size: 20px;
@@ -185,122 +163,11 @@ body {
         left: 30vw;
         top: 90px;
         padding: 5%;
-        .login-input {
-          color: #fff;
-          font-family: pfs-bold;
-          font-weight: 800;
-          position: relative;
-          text-align: left;
-          line-height: 0;
-          margin-left: 20px;
-        }
-        h1 {
-          font-family: pfs-bold;
-          color: #fff;
-        }
-        .register {
-          position: relative;
-          color: #fff;
-          font-family: pfs-bold;
-          font-weight: 900;
-          font-size: 13px;
-          top: -15px;
-          margin-left: 20px;
-          a {
-            text-decoration: underline;
-            color: #fff;
-            opacity: 1;
-            -webkit-transition: .1s;
-            -moz-transition: .1s;
-            -ms-transition: .1s;
-            -o-transition: .1s;
-            transition: .1s;
-            &:hover {
-              opacity: .5;
-            }
-          }
-        }
-        .password {
-          padding: 10px 20px;
-          font-family: pfs-bold;
-          color: #fff;
-          background-color: #fec800;
-          border: 2px solid #fec800;
-          border-radius: 25px;
-          box-shadow: 0 0 0 #222;
-          transition: .1s;
-          width: -webkit-fill-available;
-          text-align: left;
-          font-size: 20px;
-          margin-bottom: 20px;
-          &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-          &:hover {
-            border-style: dot-dash;
-            border-color: #fcf0df;
-          }
-          &:focus {
-            box-shadow: 1px 1px 2px #222;
-          }
-        }
-        .email-wrap {
-          background-color: #fec800;
-          border: 2px solid #fec800;
-          border-radius: 25px;
-          box-shadow: 0 0 0 #222;
-          transition: .1s;
-          width: -webkit-fill-available;
-          &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-          &:hover {
-            border-style: dot-dash;
-            border-color: #fcf0df;
-          }
-          &:focus-within {
-            box-shadow: 1px 1px 2px #222;
-          }
-          input {
-            width: 100%;
-            border: none;
-            background-color: transparent;
-            font-family: pfs-bold;
-            color: #fff;
-            font-size: 20px;
-            text-align: right;
-            padding: 10px 20px;
-            text-align: left;
-          }
-        }
-        .btn-main {
-          padding: 10px;
-          margin-bottom: 20px;
-          font-family: pfs-bold;
-          color: #fff;
-          background-color: #f18416;
-          border: 2px solid #f18416;
-          border-radius: 25px;
-          box-shadow: 0 0 0 #222;
-          transition: .1s;
-          width: -webkit-fill-available;
-          text-align: center;
-          cursor: pointer;
-          font-size: 20px;
-          &:hover {
-            border-style: dot-dash;
-            border-color: #d87114;
-          }
-          &:active {
-            box-shadow: 1px 1px 2px #222;
-          }
-        }
       }
     }
   }
 }
+
 
 @media only screen and (max-width: 600px) {
   body {
@@ -327,118 +194,6 @@ body {
         left: 20vw;
         top: 90px;
         padding: 5%;
-        .login-input {
-          color: #fff;
-          font-family: pfs-bold;
-          font-weight: 800;
-          position: relative;
-          text-align: left;
-          line-height: 0;
-          margin-left: 20px;
-        }
-        h1 {
-          font-family: pfs-bold;
-          color: #fff;
-        }
-        .register {
-          position: relative;
-          color: #fff;
-          font-family: pfs-bold;
-          font-weight: 900;
-          font-size: 13px;
-          top: -15px;
-          margin-left: 20px;
-          a {
-            text-decoration: underline;
-            color: #fff;
-            opacity: 1;
-            -webkit-transition: .1s;
-            -moz-transition: .1s;
-            -ms-transition: .1s;
-            -o-transition: .1s;
-            transition: .1s;
-            &:hover {
-              opacity: .5;
-            }
-          }
-        }
-        .password {
-          padding: 10px 20px;
-          font-family: pfs-bold;
-          color: #fff;
-          background-color: #fec800;
-          border: 2px solid #fec800;
-          border-radius: 25px;
-          box-shadow: 0 0 0 #222;
-          transition: .1s;
-          width: -webkit-fill-available;
-          text-align: left;
-          font-size: 20px;
-          margin-bottom: 20px;
-          &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-          &:hover {
-            border-style: dot-dash;
-            border-color: #fcf0df;
-          }
-          &:focus {
-            box-shadow: 1px 1px 2px #222;
-          }
-        }
-        .email-wrap {
-          background-color: #fec800;
-          border: 2px solid #fec800;
-          border-radius: 25px;
-          box-shadow: 0 0 0 #222;
-          transition: .1s;
-          width: -webkit-fill-available;
-          &::-webkit-inner-spin-button,::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-          &:hover {
-            border-style: dot-dash;
-            border-color: #fcf0df;
-          }
-          &:focus-within {
-            box-shadow: 1px 1px 2px #222;
-          }
-          input {
-            width: 100%;
-            border: none;
-            background-color: transparent;
-            font-family: pfs-bold;
-            color: #fff;
-            font-size: 20px;
-            text-align: right;
-            padding: 10px 20px;
-            text-align: left;
-          }
-        }
-        .btn-main {
-          padding: 10px;
-          margin-bottom: 20px;
-          font-family: pfs-bold;
-          color: #fff;
-          background-color: #f18416;
-          border: 2px solid #f18416;
-          border-radius: 25px;
-          box-shadow: 0 0 0 #222;
-          transition: .1s;
-          width: -webkit-fill-available;
-          text-align: center;
-          cursor: pointer;
-          font-size: 20px;
-          &:hover {
-            border-style: dot-dash;
-            border-color: #d87114;
-          }
-          &:active {
-            box-shadow: 1px 1px 2px #222;
-          }
-        }
       }
     }
   }

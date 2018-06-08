@@ -18,11 +18,9 @@ session_start();
         <div class="login-wrap">
             <h1>Login</h1>
             <p class="login-input">Email</p>
-            <div class="email-wrap">
-                <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" id="email-input">
-            </div>
+            <input type="text" autocomplete="off" autofocus required spellcheck="false" name="username" id="email-input" class="input">
             <p class="login-input">Wachtwoord</p>
-            <input type="password" autocomplete="off" autofocus required name="password" class="password">
+            <input type="password" autocomplete="off" autofocus required name="password" class="input">
             <button type="submit" name="login" class="btn-main">login</button>
             <p class="register">Geen account? Registreer <a href="registratie">hier!</a></p>
         </div>
@@ -37,7 +35,6 @@ session_start();
                 this.value = this.value.replace(/\s/g, "");
             }
         });
-        $("#email-standard").val('@rocdeleijgraaf.nl');
     </script>
 </body>
 </html>
