@@ -2,7 +2,7 @@
 
     </head>
     <body>
-         <form>
+         <form method="post">
              <div class="personal_details">
                  <label for="fName"> Voornaam </label>
                  <br/>
@@ -10,7 +10,7 @@
                  <br />
                  <label for="prefix"> Tussenvoegsel </label>
                  <br/>
-                 <input type="text" id="prefix" name="prefix" value="" required>
+                 <input type="text" id="prefix" name="prefix" value="">
                  <br />
                  <label for="lName"> Achternaam </label>
                  <br/>
@@ -34,7 +34,7 @@
                  </select>
                  <br />
                  <label for="group"> Groep</label>
-                 <select id="group">
+                 <select id="group" name="group">
                      <option value="1"> 1 </option>
                      <option value="2"> 2 </option>
                      <option value="3"> 3 </option>
@@ -55,7 +55,7 @@
                  <br />
                  <label for="internLead"> BPV-begeleider</label>
                  <br />
-                 <select id="internLead" name="class">
+                 <select id="internLead" name="internLead">
                      <option value="teacher 1"> teacher 1 </option>
                      <option value="teacher 2"> teacher 2 </option>
                      <option value="teacher 3"> teacher 3 </option>
@@ -72,7 +72,13 @@
              <br />
              <button type="submit" name="submit"> Sla gegevens op</button>
         </form>
+         <button onclick="resetPersonalValues()"> Reset personal_info </button>
          <br />
+         <br />
+         <button onclick="resetInternshipValues()"> Reset bpv_info </button>
+         <br />
+         <br />
+         <button onclick="resetAllValues()"> Reset alles </button>
          <br />
          <br />
          <br />
