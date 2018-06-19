@@ -4,28 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link href="../styles/css/main.css" rel="stylesheet">
+    <link href="../../styles/css/main.css" rel="stylesheet">
     <script src="../../functions/js/jquery.js"></script>
-    <script src="../../functions/js/jquery-ui.js.js"></script>
+    <script src="../../functions/js/jquery-ui.js"></script>
     <script src="../../functions/js/login/register.js"></script>
 </head>
 <body>
-<form method="post">
-    <label for="email">
-        Email
-    </label>
-    <input type="text" id="email" name="email" placeholder="Uw ROC e-mailadres ...">
-    <br>
-    <label for="password">
-        Password
-    </label>
-    <input type="password" id="password" name="first_password" placeholder="Wachtwoord">
-    <br>
-    <label for="second_password">
-        Retype password
-    </label>
-    <input type="password" id="second_password" name="second_password" placeholder="Retype password" >
-    <br>
+<form method="post" class="mainForm">
+    <label for="email">Email</label><br>
+    <input type="text" id="email" name="email" placeholder="Uw ROC e-mailadres ..."><br>
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="first_password" placeholder="Wachtwoord"><br>
+    <label for="second_password">Retype password</label><br>
+    <input type="password" id="second_password" name="second_password" placeholder="Retype password"><br>
     <div id="error_log" style="width: 210px; height: 90px; border: 3px solid black;border-radius: 15px">
         <ul style="list-style: none; margin-left: -10% ">
             <li id="ROCemail">
@@ -43,7 +34,7 @@
         </ul>
     </div>
     <br>
-    <button type="submit" name="submit" id="register" disabled="disabled">Register</button>
-    <a href="../" id="back">Annuleren</a>
+    <button type="submit" name="submit" id="register" disabled="disabled" class="confirm">Register</button>
+    <a href="../" id="back" class="cancel">Annuleren</a>
 </form>
 </body>
