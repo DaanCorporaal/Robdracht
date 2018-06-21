@@ -108,6 +108,6 @@
         <!-- Aandachtspunten error-->
         <span class="error"><?php echo $notitiesErr;?></span><br>
 
-        <input type="submit" name="submit" value="Submit" class="confirm">
+        <input type="submit" name="submit" value="Bevestigen" class="confirm">
     </div>
 </form>
