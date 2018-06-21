@@ -245,17 +245,26 @@ body {
   background-color: #fff;
   .wrapper {
     padding: 40px;
+    box-shadow: 0 0 10px #444;
     label {
       font-family: pfs-bold;
       margin-bottom: 20px;
+      position: relative;
+      left: 15px;
     }
-    input {
+    input,textarea {
+      resize: none;
       padding: 3px 15px;
       width: 50%;
-      height: 25px;
+      min-height: 25px;
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
       border-radius: 15px;
+      border: solid 3px black;
+      border-top-color: #d87114;
+      border-right-color: #d87114;
+      border-bottom-color: #f18416;
+      border-left-color: #f18416;
       font-family: pfs-bold;
       //border-color: #fec800;
       //background-color: #fec800;
@@ -263,6 +272,9 @@ body {
       &[type="radio"] {
         padding: 0;
         width: 60px;
+        height: 30px;
+        position: relative;
+        bottom: -10px;
       }
     }
     .cancel {

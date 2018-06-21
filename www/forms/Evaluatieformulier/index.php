@@ -25,13 +25,13 @@
         <br><br>
         <!-- wat ging er goed?-->
         <label for="goed">Wat ging er goed?</label><br>
-        <input type="text" id="goed" name="goed" value="<?php echo $goed;?>">
+        <textarea id="goed" name="goed" rows="4" cols="50"><?php echo $goed;?></textarea>
         <!-- Wat ging er goed? error-->
         <span class="error">* <?php echo $goedErr;?></span>
         <br><br>
         <!-- Wat kon er beter?-->
         <label for="beter">Wat kon beter?</label><br>
-        <input type="text" id="beter" name="beter" value="<?php echo $beter;?>">
+        <textarea id="beter" name="beter" rows="4" cols="50"><?php echo $beter;?></textarea>
         <!-- Wat kon er beter? error-->
         <span class="error">* <?php echo $beterErr;?></span>
         <br><br>
