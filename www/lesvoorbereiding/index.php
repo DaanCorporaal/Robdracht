@@ -1,11 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <style>
-        .error {color: #FF0000;}
-    </style>
+    <link rel="stylesheet" href="../styles/css/main.css" type="text/css">
 </head>
-<body>
+<body class="mainFormBody">
 
 <?php
 // define variables and set to empty values
@@ -68,7 +66,6 @@ function test_input($data) {
 }
 ?>
 
-<h2>Lesvoorbereiding form</h2>
 <?php
 // Test values
 include '../forms/Lesvoorbereiding/index.php';
