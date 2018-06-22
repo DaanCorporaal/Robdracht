@@ -13,6 +13,7 @@ var dbInternPlace = $('#internPlace').val();
 
 
 pwChangeSession = localStorage.getItem('pwChangeSession');
+
 // new password variables
 if(pwChangeSession == null || pwChangeSession == false){
     var oldDbPass;
@@ -24,16 +25,15 @@ if(pwChangeSession == null || pwChangeSession == false){
 }
 
 
- $(document).ready(function () {
-     if(pwChangeSession == 'true'){
+$(document).ready(function () {
+    if(pwChangeSession == 'true'){
+        $('#pwChangeForm').fadeIn(0);
 
-         $('#pwChangeForm').fadeIn(0);
-
-     }else {
-         $('#egForm').fadeIn(0);
-     }
-     console.log(pwChangeSession);
-     $.ajax({
+    }else {
+        $('#egForm').fadeIn(0);
+    }
+    pwChangeSession = false;
+    $.ajax({
         url: '../functions/php/formFunctions/egGetData.php',
         dataType: 'json',
         type: 'post' ,
@@ -68,20 +68,20 @@ if(pwChangeSession == null || pwChangeSession == false){
         error: function () {
             console.log('error');
         }
-     });
- })
+    });
+})
 function resetAllValues() {
-     $('#fName').val(dbFName);
-     $('#lName').val(dbLName);
-     $('#prefix').val(dbPrefix);
-     $('#Email').val(dbEmail);
-     $('#class').val(dbClass);
-     $('#group').val(dbGroup);
-     $('#internComp').val(dbInternComp);
-     $('#internPlace').val(dbInternPlace);
-     $('#internLead').val(dbInternLead);
-     $('#internTeacher').val(dbInternTeacher);
- }
+    $('#fName').val(dbFName);
+    $('#lName').val(dbLName);
+    $('#prefix').val(dbPrefix);
+    $('#Email').val(dbEmail);
+    $('#class').val(dbClass);
+    $('#group').val(dbGroup);
+    $('#internComp').val(dbInternComp);
+    $('#internPlace').val(dbInternPlace);
+    $('#internLead').val(dbInternLead);
+    $('#internTeacher').val(dbInternTeacher);
+}
 function resetPersonalValues() {
     $('#fName').val(dbFName);
     $('#lName').val(dbLName);
@@ -105,33 +105,59 @@ function changePW() {
     localStorage.setItem('pwChangeSession', pwChangeSession);
 }
 function setNewPW(event) {
-        event.preventDefault();
+    event.preventDefault();
 
-        var newPass = $('#fNewPw').val();
-        var typedOldPw = $('#oldPw').val();
-        $.ajax({
-            url: '../functions/php/formFunctions/changePw.php',
-            type: 'post',
-            data: {oldDBSalt: oldDbSalt,
-                   oldDBPw: oldDbPass,
-                   newPw: newPass,
-                   oldPw: typedOldPw
-                  } ,
-            dataType: 'json',
-            success: function (data) {
-                console.log(data);
-                if(data == 'success'){
-                    pwChangeSession = false;
-                    localStorage.setItem('pwChangeSession', pwChangeSession);
-                    $('#egForm').fadeIn(0);
-                    $('#pwChangeForm').fadeOut(0);
-                }else if(data == 'notSameError'){
-                    $('#oldPwErr').fadeIn(0);
-                }
-
-            },
-            error: function () {
-                console.log('error');
+    var newPass = $('#fNewPw').val();
+    var typedOldPw = $('#oldPw').val();
+    $.ajax({
+        url: '../functions/php/formFunctions/changePw.php',
+        type: 'post',
+        data: {oldDBSalt: oldDbSalt,
+            oldDBPw: oldDbPass,
+            newPw: newPass,
+            oldPw: typedOldPw
+        } ,
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+            if(data == 'success'){
+                pwChangeSession = false;
+                localStorage.setItem('pwChangeSession', pwChangeSession);
+                $('#egForm').fadeIn(0);
+                $('#pwChangeForm').fadeOut(0);
+            }else if(data == 'notSameError'){
+                $('#oldPwErr').fadeIn(0);
             }
-        });
+
+        },
+        error: function () {
+            console.log('error');
+        }
+    });
+}
+function cancel(e) {
+    e.preventDefault();
+   // pwChangeSession = false;
+    $('#egForm').fadeIn(0);
+    $('#pwChangeForm').fadeOut(0);
+   // localStorage.setItem('pwChangeSession', pwChangeSession);
+
+}
+function leaveFunction(e) {
+        if(performance.navigation.type == PerformanceNavigation.TYPE_RELOAD || e.keyCode == 116){
+            console.log("refresh button is clicked");
+            pwChangeSession = true;
+            localStorage.setItem('pwChangeSession', pwChangeSession);
+        }else {
+
+            if(pwChangeSession == true){
+                console.log('Normal close');
+              //  pwChangeSession = false;
+              //  localStorage.setItem('pwChangeSession', pwChangeSession);
+               // return false;
+            } else {
+                console.log(pwChangeSession);
+            }
+        }
+
 }

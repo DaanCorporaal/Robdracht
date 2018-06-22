@@ -1,7 +1,10 @@
-    <head>
+<html >
+
+
+<head>
 
     </head>
-    <body>
+    <body onbeforeunload="return leaveFunction(event)">
         <div id="egForm" style="display:none;">
             <form method="post">
                 <div class="personal_details">
@@ -84,6 +87,7 @@
             <br />
             <br />
             <button name="pwChange" onclick="changePW()" id="pwChange"> Verander wachtwoord </button>
+            <a href="../home" > Home </a>
         </div>
          <div id="pwChangeForm" style="display: none">
             <form>
@@ -105,8 +109,12 @@
                 <br />
                 <br />
                 <button onclick="setNewPW(event)"> wijzig wachtwoord</button>
+                <a onclick="cancel(event)" href="#"> Annuleren</a>
+                <a href="../home/" > back</a>
             </form>
          </div>
          <script src="../functions/js/jquery.js"></script>
          <script src="../functions/js/egScript.js"></script>
+
     </body>
+</html>
