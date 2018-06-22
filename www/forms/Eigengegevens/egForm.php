@@ -58,7 +58,6 @@
                     <button type="submit" name="submit">Sla gegevens op</button>
                 </div>
             </form>
-<<<<<<< HEAD
             <button onclick="resetPersonalValues()"> Reset personal_info </button>
             <br />
             <br />
@@ -71,12 +70,10 @@
             <br />
             <button name="pwChange" onclick="changePW()" id="pwChange"> Verander wachtwoord </button>
             <a href="../home" > Home </a>
-=======
             <button onclick="resetPersonalValues()">Reset personal_info</button>
             <button onclick="resetInternshipValues()">Reset bpv_info</button>
             <button onclick="resetAllValues()">Reset alles</button>
             <button name="pwChange" onclick="changePW()" id="pwChange">Verander wachtwoord</button>
->>>>>>> ad24add9257fba2cd2a0f07af4a4405ce1f8d388
         </div>
          <div id="pwChangeForm" style="display: none">
             <form>
@@ -91,15 +88,10 @@
                 <div id="sNewPw">
                     <input placeholder="herhaal nieuw wachtwoord" type="password" id="sNewPw" name="sNewPw" required>
                 </div>
-<<<<<<< HEAD
                 <br />
                 <br />
                 <button onclick="setNewPW(event)"> wijzig wachtwoord</button>
                 <a onclick="cancel(event)" href="#"> Annuleren</a>
-                <a href="../home/" > back</a>
-=======
-                <button onclick="setNewPW(event)">wijzig wachtwoord</button>
->>>>>>> ad24add9257fba2cd2a0f07af4a4405ce1f8d388
             </form>
          </div>
          <script src="../functions/js/jquery.js"></script>
