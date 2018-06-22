@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2018 at 12:52 PM
+-- Generation Time: Jun 22, 2018 at 09:39 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -116,7 +116,7 @@ CREATE TABLE `personal_details` (
   `prefix` varchar(10) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(128) NOT NULL,
+  `password` varchar(256) NOT NULL,
   `salt` varchar(256) NOT NULL,
   `confirmed` tinyint(1) NOT NULL,
   `confirm_code` int(11) NOT NULL,
@@ -127,6 +127,15 @@ CREATE TABLE `personal_details` (
   `bpv_teacher` varchar(100) NOT NULL,
   `bpv_coach` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `personal_details`
+--
+
+INSERT INTO `personal_details` (`person_id`, `firstname`, `prefix`, `lastname`, `email`, `password`, `salt`, `confirmed`, `confirm_code`, `classname`, `school_class`, `bpv_name`, `bpv_city`, `bpv_teacher`, `bpv_coach`) VALUES
+(12, 'Noah', '', 'Lammertsma', 'noah@rocdeleijgraaf.nl', 'a7c30a1aa48cf3f8fea094b0b2ebff1078c359d67aebe31469c7132102ddb27aef7dd6d65410eb7acc320624c78d451aad95c335e529744793281e9ee1fac228', '10014493528321bd4eca0b9516f98b2c913c3675e4fd784500556f71c3aff053cbbb79c3f0e041793504f76c867fe2c77c122c1ea01eb811ed75f87804532e9c', 0, 333679, 'TOOC43A', 3, 'Infinety', 'Valencia', 'Martinez', 'teacher 6'),
+(13, 'Noah', '', 'Lammertsma', 'test@leijgraaf.nl', '0addcf60937d990d52f56876487a3fc703bb1ab5d9c17383bd240d6cfc502a5aeffe000008568e1bf5edfb12d9d2ed01c6ec51353677bf5a24a7cd30867b1a57', 'cde38b1484edcd1a0e324565e61d45405ddef6dfbd9fdf96476fc1be540a647365578cfc6b24549c467bc14e5dcae33881f86de6d12acfe2afd55abd1dd393b2', 0, 240267, 'TOOC42A', 4, 'Test', 'Oss', 'Shihaab', 'teacher 4'),
+(14, '', '', '', 'test@rocdeleijgraaf.nl', 'bed5d1d4ff22ae24f2c66f89fc492bef243cbf2b3506d077cb7b63314d3e36cd020d823cfb8bd6071148f40916f0e767da72c1036fc34f1a7769f73a04b62737', 'f8fd4a44ba6b24eb9d820a13dfec18db8f5b7794950486c1a79cce99672f8ce260e7d2faa740fd730896a5b0a30f2a5ef35590ebc0de9fe92513c2436ab333e2', 0, 702874, '', 0, '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -195,7 +204,7 @@ ALTER TABLE `line_details`
 -- AUTO_INCREMENT for table `personal_details`
 --
 ALTER TABLE `personal_details`
-  MODIFY `person_id` int(24) NOT NULL AUTO_INCREMENT;
+  MODIFY `person_id` int(24) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Constraints for dumped tables
 --
