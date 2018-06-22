@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
 
     if($check){
          // login true
-                header('Location: ../../../home');
+                header('Location: ../../../');
     }
     else
     {
