@@ -281,6 +281,21 @@ body {
         bottom: -10px;
       }
     }
+    select {
+      resize: none;
+      padding: 3px 15px;
+      width: 54.3%;
+      min-height: 37px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      border: solid 3px black;
+      border-top-color: #d87114;
+      border-right-color: #d87114;
+      border-bottom-color: #f18416;
+      border-left-color: #f18416;
+      font-family: pfs-bold;
+    }
     .cancel {
       font-family: pfs-bold;
       text-decoration: none;
