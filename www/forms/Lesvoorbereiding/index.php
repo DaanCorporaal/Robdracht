@@ -109,5 +109,6 @@
         <span class="error"><?php echo $notitiesErr;?></span><br>
 
         <input type="submit" name="submit" value="Bevestigen" class="confirm">
+        <a href="../eigengegevens" class="cancel">Annuleren</a>
     </div>
 </form>
