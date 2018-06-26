@@ -70,7 +70,7 @@
                     <br>
                     <br>
                     <button name="pwChange" onclick="changePW()" id="pwChange" class="confirm">Verander wachtwoord</button>
-                    <a href="../home" class="cancel">Home</a>
+                    <a href="../" class="cancel">Home</a>
                 </div>
             </form>
         </div>
