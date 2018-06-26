@@ -14,6 +14,8 @@ if(isset($_POST['email'])){
     $sth->execute($parameters);
 
     if($row = $sth->fetch()){
+        $_SESSION['dbSalt'] = $row['salt'];
+        $_SESSION['dbPass'] = $row['password'];
         echo json_encode($row);
     }else {
         echo 'error';

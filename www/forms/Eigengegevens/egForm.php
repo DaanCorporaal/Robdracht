@@ -5,11 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Login</title>
         <link href="../styles/css/main.css" rel="stylesheet">
-        <script src="../functions/js/jquery.js"></script>
-        <script src="../functions/js/jquery-ui.js"></script>
-        <script src="../functions/js/egScript.js"></script>
+
     </head>
-    <body onbeforeunload="return leaveFunction(event)" onunload="leftFunction()" class="mainFormBody">
+    <body class="mainFormBody">
         <div id="egForm" style="display:none;">
             <form method="post" class="mainForm">
                 <div class="wrapper">
@@ -82,7 +80,6 @@
                 <input placeholder="oud wachtwoord" type="password" name="oldPw" id="oldPw" required>
                 <span id="oldPwErr" style="display:none;color:red">Oud wachtwoord is niet gelijk aan het wachtwoord van nu!</span>
                 </div>
-
                 <div id="fNewPw">
                 <input placeholder="nieuw wachtwoord" type="password" name="fNewPw" id="fNewPw" required>
                 </div>
@@ -91,9 +88,12 @@
                 </div>
                 <br />
                 <br />
-                <button onclick="setNewPW(event)"> wijzig wachtwoord</button>
+                <button onclick="setNewPw(event)"> wijzig wachtwoord</button>
                 <button onclick="cancelPwChange(event)"> Annuleren</button>
             </form>
         </div>
+        <script src="../functions/js/jquery.js"></script>
+        <script src="../functions/js/jquery-ui.js"></script>
+        <script src="../functions/js/egScript.js"></script>
     </body>
 </html>

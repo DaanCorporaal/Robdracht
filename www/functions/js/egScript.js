@@ -113,9 +113,9 @@ function setNewPW(event) {
         url: '../functions/php/formFunctions/changePw.php',
         type: 'post',
         data: {oldDBSalt: oldDbSalt,
-            oldDBPw: oldDbPass,
-            newPw: newPass,
-            oldPw: typedOldPw
+               oldDBPw: oldDbPass,
+               newPw: newPass,
+               oldPw: typedOldPw
         } ,
         dataType: 'json',
         success: function (data) {
@@ -135,6 +135,7 @@ function setNewPW(event) {
         }
     });
 }
+
 function cancelPwChange(e) {
     e.preventDefault();
     $('#egForm').fadeIn(0);
@@ -144,6 +145,7 @@ function cancelPwChange(e) {
     console.log(pwChangeSession);
 
 }
+/*
 function leaveFunction(e) {
     if(pwChangeSession == true){
         return false;
@@ -157,3 +159,4 @@ function leftFunction() {
       //  localStorage.setItem('pwChangeSession', pwChangeSession);
     }
 }
+*/
