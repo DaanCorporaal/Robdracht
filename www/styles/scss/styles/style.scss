@@ -22,7 +22,8 @@ html::after {
   top: 20vw;
   left: 0;
   opacity: .1;
-  pointer-events: none
+  pointer-events: none;
+  font-family: pfs-bold;
 }
 html::before {
   color: #fff;
