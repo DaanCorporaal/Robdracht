@@ -1,6 +1,6 @@
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="mainForm">
     <div class="wrapper">
-        <h2>Lesvoorbereiding form</h2>
+        <h2>Daan is de beste  form</h2>
         <!-- Datum voorbereiding label-->
         <label for="datum">Datum voorbereiding</label><br>
         <input type="date" id="datum" name="datum" value="<?php echo $datum;?>">
@@ -25,13 +25,13 @@
         <br><br>
         <!-- wat ging er goed?-->
         <label for="goed">Wat ging er goed?</label><br>
-        <textarea id="goed" name="goed" rows="4" cols="50"><?php echo $goed;?></textarea>
+        <textarea id="goed" name="goed" rows="6" cols="50"><?php echo $goed;?></textarea>
         <!-- Wat ging er goed? error-->
         <span class="error">* <?php echo $goedErr;?></span>
         <br><br>
         <!-- Wat kon er beter?-->
         <label for="beter">Wat kon beter?</label><br>
-        <textarea id="beter" name="beter" rows="4" cols="50"><?php echo $beter;?></textarea>
+        <textarea id="beter" name="beter" rows="6" cols="50"><?php echo $beter;?></textarea>
         <!-- Wat kon er beter? error-->
         <span class="error">* <?php echo $beterErr;?></span>
         <br><br>

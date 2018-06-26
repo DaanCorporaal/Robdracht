@@ -5,6 +5,7 @@
 // general styling
 body {
   margin: 0;
+  background-color: #e1e1e1;
 }
 * {
   outline: none;
@@ -234,10 +235,11 @@ body {
 
 // form styling
 .mainFormBody {
-  background-color: #00a2a5;
+  background-color: #e1e1e1;
 }
 .mainForm {
   width: 60vw;
+  color: white;
   height: 100%;
   margin: 10vh 20vw;
   padding: 0px;
@@ -246,11 +248,13 @@ body {
   .wrapper {
     padding: 40px;
     box-shadow: 0 0 10px #444;
+    background-color: #00a2a5;
     label {
       font-family: pfs-bold;
       margin-bottom: 20px;
       position: relative;
       left: 15px;
+      color: white;
     }
     input,textarea {
       resize: none;
