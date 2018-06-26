@@ -22,7 +22,7 @@ session_start();
             <p class="login-input">Wachtwoord</p>
             <input type="password" autocomplete="off" autofocus required name="password" class="input">
             <button type="submit" name="login" class="btn-main">login</button>
-            <p class="register">Geen account? Registreer <a href="registratie">hier!</a></p>
+            <p class="register">Geen account? Registreer<a href="registratie">hier!</a></p>
         </div>
     </form>
     <script>

@@ -1,10 +1,5 @@
-<html >
-
-
-<head>
-
-    </head>
-    <body onbeforeunload="return leaveFunction(event)">
+<html>
+    <body onbeforeunload="return leaveFunction(event)" onunload="leftFunction()">
         <div id="egForm" style="display:none;">
             <form method="post">
                 <div class="wrapper">
@@ -27,7 +22,8 @@
                             <option value="TOOC43B">TOOC43B</option>
                             <option value="TOOC42B">TOOC42B</option>
                             <option value="TOOC41B">TOOC41B</option>
-                        </select><br><br>
+                        </select>
+                        <br>
                         <label for="group"> Groep</label><br>
                         <select id="group" name="group">
                             <option value="1">1</option>
@@ -38,7 +34,7 @@
                             <option value="6">6</option>
                             <option value="7">7</option>
                             <option value="8">8</option>
-                        </select><br><br>
+                        </select><br>
                         <label for="internComp"> BPV-instelling </label><br>
                         <input type="text" name="internComp" value="" id="internComp"><br><br>
                         <label for="internPlace"> BPV-plaats </label><br>
@@ -51,7 +47,8 @@
                             <option value="teacher 4">teacher 4</option>
                             <option value="teacher 5">teacher 5</option>
                             <option value="teacher 6">teacher 6</option>
-                        </select><br><br>
+                        </select>
+                        <br>
                         <label for="internTeacher"> BPV-opleider</label><br>
                         <input type="text" name="internTeacher" value="" id="internTeacher"><br><br>
                     </div>
@@ -59,21 +56,17 @@
                 </div>
             </form>
             <button onclick="resetPersonalValues()"> Reset personal_info </button>
-            <br />
-            <br />
+            <br>
+            <br>
             <button onclick="resetInternshipValues()"> Reset bpv_info </button>
-            <br />
-            <br />
+            <br>
+            <br>
             <button onclick="resetAllValues()"> Reset alles </button>
-            <br />
-            <br />
-            <br />
+            <br>
+            <br>
+            <br>
             <button name="pwChange" onclick="changePW()" id="pwChange"> Verander wachtwoord </button>
             <a href="../home" > Home </a>
-            <button onclick="resetPersonalValues()">Reset personal_info</button>
-            <button onclick="resetInternshipValues()">Reset bpv_info</button>
-            <button onclick="resetAllValues()">Reset alles</button>
-            <button name="pwChange" onclick="changePW()" id="pwChange">Verander wachtwoord</button>
         </div>
          <div id="pwChangeForm" style="display: none">
             <form>
@@ -91,7 +84,7 @@
                 <br />
                 <br />
                 <button onclick="setNewPW(event)"> wijzig wachtwoord</button>
-                <a onclick="cancel(event)" href="#"> Annuleren</a>
+                <button onclick="cancelPwChange(event)"> Annuleren</button>
             </form>
          </div>
          <script src="../functions/js/jquery.js"></script>

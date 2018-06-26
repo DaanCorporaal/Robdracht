@@ -317,3 +317,37 @@ body {
     }
   }
 }
+
+// home styling
+.wrapperHome {
+  font-family: pfs-bold;
+  a {
+    text-decoration: none;
+    color: #f18416;
+  }
+  .btn {
+    padding: 5px;
+    font-family: pfs-bold;
+    color: #fff;
+    background-color: #f18416;
+    border: 2px solid #f18416;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 0 0 #222;
+    box-shadow: 0 0 0 #222;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+    width: auto;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 17px;
+    &:hover {
+      border-style: dot-dash;
+      border-color: #d87114;
+    }
+    &:active {
+      box-shadow: 1px 1px 2px #222;
+    }
+  }
+}

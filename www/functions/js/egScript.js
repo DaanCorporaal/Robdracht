@@ -32,7 +32,6 @@ $(document).ready(function () {
     }else {
         $('#egForm').fadeIn(0);
     }
-    pwChangeSession = false;
     $.ajax({
         url: '../functions/php/formFunctions/egGetData.php',
         dataType: 'json',
@@ -106,9 +105,10 @@ function changePW() {
 }
 function setNewPW(event) {
     event.preventDefault();
-
     var newPass = $('#fNewPw').val();
     var typedOldPw = $('#oldPw').val();
+    console.log(typedOldPw);
+    console.log(oldDbPass);
     $.ajax({
         url: '../functions/php/formFunctions/changePw.php',
         type: 'post',
@@ -135,29 +135,25 @@ function setNewPW(event) {
         }
     });
 }
-function cancel(e) {
+function cancelPwChange(e) {
     e.preventDefault();
-   // pwChangeSession = false;
     $('#egForm').fadeIn(0);
     $('#pwChangeForm').fadeOut(0);
-   // localStorage.setItem('pwChangeSession', pwChangeSession);
+    pwChangeSession = false;
+    localStorage.setItem('pwChangeSession', pwChangeSession);
+    console.log(pwChangeSession);
 
 }
 function leaveFunction(e) {
-        if(performance.navigation.type == PerformanceNavigation.TYPE_RELOAD || e.keyCode == 116){
-            console.log("refresh button is clicked");
-            pwChangeSession = true;
-            localStorage.setItem('pwChangeSession', pwChangeSession);
-        }else {
-
-            if(pwChangeSession == true){
-                console.log('Normal close');
-              //  pwChangeSession = false;
-              //  localStorage.setItem('pwChangeSession', pwChangeSession);
-               // return false;
-            } else {
-                console.log(pwChangeSession);
-            }
-        }
-
+    if(pwChangeSession == true){
+        return false;
+    } else {
+        console.log(pwChangeSession);
+    }
+}
+function leftFunction() {
+    if(pwChangeSession == true){
+      //  pwChangeSession = false;
+      //  localStorage.setItem('pwChangeSession', pwChangeSession);
+    }
 }
